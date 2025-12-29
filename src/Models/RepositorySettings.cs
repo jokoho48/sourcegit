@@ -1,10 +1,19 @@
 using System.Collections.Generic;
 using Avalonia.Collections;
+using SourceGit.ViewModels;
 
 namespace SourceGit.Models
 {
     public class RepositorySettings
     {
+
+
+        public RepositorySettings() {
+            
+            AutoFetchInterval = Preferences.Instance.AutoFetchInterval;
+            EnableAutoFetch = Preferences.Instance.EnableAutoFetch;
+        }
+
         public string DefaultRemote
         {
             get;

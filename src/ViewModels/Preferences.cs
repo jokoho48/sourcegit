@@ -485,6 +485,18 @@ namespace SourceGit.ViewModels
             set => SetProperty(ref _lastCheckUpdateTime, value);
         }
 
+        public bool EnableAutoFetch
+        {
+            get;
+            set;
+        } = false;
+
+        public int AutoFetchInterval
+        {
+            get;
+            set;
+        } = 10;
+
         public void SetCanModify()
         {
             _isReadonly = false;
